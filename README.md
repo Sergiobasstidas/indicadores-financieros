@@ -10,19 +10,15 @@ Este proyecto es una aplicación Angular para visualizar indicadores financieros
 ## Instalación
 
 1. Clonar este repositorio en tu máquina local:
-```bash
-    git clone <url-del-repositorio>
-    cd financial-indicators 
+  git clone <https://github.com/Sergiobasstidas/indicadores-financieros>
+  cd financial-indicators 
     
 
 2.	Instala las dependencias del proyecto:
-```bash
     npm install
 
 3.  Iniciar Aplicación
-
-  ```bash
-       ng serve
+    ng serve
 
 ## Configuración de pruebas unitarias
 
@@ -32,8 +28,6 @@ Karma es el test runner utilizado para lanzar las pruebas en un navegador. La co
 #### Configuración de TypeScript para pruebas
 
 El archivo tsconfig.spec.json está configurado para incluir solo los archivos de prueba (*.spec.ts) y sus archivos de declaración (*.d.ts). Asegúrate de que el contenido de tsconfig.spec.json sea el siguiente:
-
-```sh {"id":"01J22CS7Q6CKF72572BSN6T2JN"}
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
@@ -48,9 +42,6 @@ El archivo tsconfig.spec.json está configurado para incluir solo los archivos d
     "src/**/*.d.ts"
   ]
 }
-```
 
 #### Ejecutar las pruebas
-
-```bash
-    ng test
+   ng test
