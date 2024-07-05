@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { IndicatorListComponent } from './components/indicator-list/indicator-list.component';
+import { IndicatorDetailComponent } from './components/indicator-detail/indicator-detail.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [CommonModule, IndicatorListComponent, IndicatorDetailComponent],
 })
 export class AppComponent {
   title = 'financial-indicators';
+  indicatorDetails: any;
+
+  handleIndicatorDetails(details: any): void {
+    this.indicatorDetails = details;
+  }
 }

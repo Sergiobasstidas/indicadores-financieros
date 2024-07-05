@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+
+}
+
+.details {
+  margin: 0 auto;
+  max-width: 1000px; /* Ajusta este valor según sea necesario */
+  width: 100%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px; /* Opcional, si quieres bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Opcional, si quieres sombra */
+}
+
+.indicator-info {
+  margin-bottom: 20px;
+}
+
+.indicator-chart {
+  margin-top: 20px;
+}

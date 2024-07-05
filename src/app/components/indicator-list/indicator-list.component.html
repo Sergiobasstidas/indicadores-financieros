@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="scrollable-content">
+    <mat-accordion>
+      <mat-expansion-panel hideToggle disabled>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="sticky-title">
+            Indicadores Financieros
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+      <mat-expansion-panel *ngFor="let indicator of indicators">
+        <mat-expansion-panel-header>
+          <mat-panel-title> {{ indicator.name }} </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="mt-3">
+          <button
+            mat-raised-button
+            class="button"
+            color="primary"
+            (click)="showDetail(indicator)"
+          >
+            Ver Detalle del Indicador
+          </button>
+        </div>
+        <mat-list>
+          <mat-list-item *ngFor="let value of indicator.values">
+            {{ value.Fecha }} | {{ value.Valor }}
+          </mat-list-item>
+        </mat-list>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

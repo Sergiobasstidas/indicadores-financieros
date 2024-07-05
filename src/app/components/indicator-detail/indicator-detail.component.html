@@ -1,0 +1,29 @@
+<div class="container">
+  <div *ngIf="indicatorDetails" class="details">
+    <h1>{{ indicatorDetails.name }}</h1>
+    <div class="indicator-info">
+      <p><strong>Nombre:</strong> {{ indicatorDetails.name }}</p>
+      <p>
+        <strong>Valor Actual:</strong> {{ indicatorDetails.values[0]?.Valor }}
+      </p>
+      <p>
+        <strong>Fecha Actual:</strong> {{ indicatorDetails.values[0]?.Fecha }}
+      </p>
+    </div>
+    <div class="indicator-chart">
+      <apx-chart
+        #chart
+        [series]="chartOptions.series!"
+        [chart]="chartOptions.chart!"
+        [xaxis]="chartOptions.xaxis!"
+        [stroke]="chartOptions.stroke!"
+        [dataLabels]="chartOptions.dataLabels!"
+        [yaxis]="chartOptions.yaxis!"
+        [title]="chartOptions.title!"
+        [subtitle]="chartOptions.subtitle!"
+        [labels]="chartOptions.labels!"
+        [legend]="chartOptions.legend!"
+      ></apx-chart>
+    </div>
+  </div>
+</div>
